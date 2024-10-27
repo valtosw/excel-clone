@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LAB1"
+             x:Class="LAB1.MainPage">
+
+    <Grid RowDefinitions="Auto, Auto, *"
+          ColumnDefinitions="*">
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Spacing="10">
+            <Button Text="Зберегти" CornerRadius="0" Clicked="SaveButtonClicked" />
+            <Button Text="Порахувати" CornerRadius="0" Clicked="CalculateButtonClicked" />
+            <Button Text="Вийти" CornerRadius="0" Clicked="ExitButtonClicked" />
+            <Button Text="Додати рядок" CornerRadius="0" Clicked="AddRowButtonClicked" />
+            <Button Text="Додати стовпчик" CornerRadius="0" Clicked="AddColumnButtonClicked" />
+            <Button Text="Видалити рядок" CornerRadius="0" Clicked="DeleteRowButtonClicked" />
+            <Button Text="Видалити стовпчик" CornerRadius="0" Clicked="DeleteColumnButtonClicked" />
+            <Button Text="Довідка" CornerRadius="0" Clicked="HelpButtonClicked" />
+        </StackLayout>
+
+        <Entry 
+            x:Name="text_input" 
+            Placeholder="Уведіть текст" 
+            Grid.Row="1"
+            Grid.ColumnSpan="1" />
+
+        <ScrollView Grid.Row="2"
+                    Grid.ColumnSpan="2">
+            <Grid x:Name="grid" />
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
